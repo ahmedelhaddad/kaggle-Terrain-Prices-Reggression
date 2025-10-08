@@ -34,8 +34,35 @@ The goal is to develop a regression model that accurately estimates terrain pric
 - Selected best features using correlation analysis and feature importance
 
 ### 3️⃣ Model Training
-- Trained multiple regression models (Linear Regression, Random Forest,
+- Trained multiple regression models (Linear Regression, Random Forest, XGBoost)
+- Used **GridSearchCV** for hyperparameter optimization
+- Selected the best-performing model based on **RMSE**
 
+### 4️⃣ Model Evaluation
+- Compared predicted vs actual prices  
+- Visualized performance metrics and feature importance  
+- Saved the trained model using `joblib`
+
+### 5️⃣ Inference
+- Loaded the saved model to make predictions on new/unseen data
+- Exported predictions to `submission.csv` for Kaggle submission
+
+---
+
+## 🧩 Tech Stack
+
+- **Python** 🐍  
+- **Pandas**, **NumPy**, **Matplotlib**, **Seaborn**  
+- **Scikit-learn**, **XGBoost**, **Joblib**
+
+---
+
+## 🧰 How to Run Locally
+
+### 🔹 1. Clone the repository
+```bash```
+git clone https://github.com/YOUR_USERNAME/terrain-prices-regression.git
+cd terrain-prices-regression
 🔹 2. Install dependencies
 pip install -r requirements.txt
 
@@ -46,8 +73,9 @@ python train.py
 🔹 4. Generate predictions
 python inference.py
 
-📊 Results
-Model	RMSE	Notes
-Linear Regression	2304.5	Baseline model
-Random Forest	1780.2	Improved performance
-XGBoost	1653.8	Best model selected ✅
+<h2> 📊 Results </h2>
+| Model             | RMSE   | Notes                 |
+| ----------------- | ------ | --------------------- |
+| Linear Regression | 2304.5 | Baseline model        |
+| Random Forest     | 1780.2 | Improved performance  |
+| XGBoost           | 1653.8 | Best model selected ✅ |
